@@ -148,3 +148,21 @@ function modulo(dividend, divisor) {
 
 var output = modulo(25, 4);
 console.log(output);
+
+//1.12
+function flipEveryNChars(input, n) {
+    var chunks = [];
+    for (var i = 0; i < input.length; i += n) {
+        chunks.push(input.substr(i, n));
+    }
+
+    var flippedChunks = chunks.map(function(chunk) {
+        return chunk.split('').reverse().join('');
+    });
+
+    return flippedChunks.join('');
+}
+
+var input = 'a short example';
+var output = flipEveryNChars(input, 5);
+console.log(output);
