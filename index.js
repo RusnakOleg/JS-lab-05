@@ -21,3 +21,11 @@ function computePower(base, exponent) {
 
 var output = computePower(2, 3);
 console.log(output);
+
+//1.4
+function computeSquareRoot(number) {
+    return Math.sqrt(number);
+}
+
+var output = computeSquareRoot(9);
+console.log(output);
