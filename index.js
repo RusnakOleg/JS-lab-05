@@ -13,3 +13,11 @@ function computeAreaOfCircle(radius) {
 
 var output = computeAreaOfCircle(4);
 console.log(output);
+
+//1.3
+function computePower(base, exponent) {
+    return Math.pow(base, exponent);
+}
+
+var output = computePower(2, 3);
+console.log(output);
