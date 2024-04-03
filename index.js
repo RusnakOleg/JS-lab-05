@@ -281,3 +281,23 @@ function isIsogram(str) {
 
 var output = isIsogram("isogram");
 console.log(output);
+
+//1.18
+function isAnyPalindromeInSentence(sentence) {
+    var words = sentence.toLowerCase().split(/\W+/);
+
+    for (var i = 0; i < words.length; i++) {
+        if (isPalindrome(words[i])) {
+            return true;
+        }
+    }
+
+    return false; 
+}
+
+function isPalindrome(word) {
+    return word === word.split('').reverse().join('');
+}
+
+var output = isAnyPalindromeInSentence("Tim is 44 years old");
+console.log(output);
