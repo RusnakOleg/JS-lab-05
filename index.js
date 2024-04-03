@@ -109,3 +109,21 @@ function findShortestWordAmongMixedElements(arr) {
 
 var output = findShortestWordAmongMixedElements([4, 'two', 2, "three"]); 
 console.log(output);
+
+//1.10
+function findSmallestNumberAmongMixedElements(arr) {
+    var smallestNumber = null;
+
+    for (var i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'number') {
+            if (smallestNumber === null || arr[i] < smallestNumber) {
+                smallestNumber = arr[i];
+            }
+        }
+    }
+
+    return smallestNumber;
+}
+
+var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
+console.log(output);
