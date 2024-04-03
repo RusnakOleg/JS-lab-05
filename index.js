@@ -91,3 +91,21 @@ console.log(output);
 
 var output2 = sumDigits(-316);
 console.log(output2);
+
+//1.9
+function findShortestWordAmongMixedElements(arr) {
+    var shortestWord = '';
+
+    for (var i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'string') {
+            if (shortestWord === '' || arr[i].length < shortestWord.length) {
+                shortestWord = arr[i];
+            }
+        }
+    }
+
+    return shortestWord;
+}
+
+var output = findShortestWordAmongMixedElements([4, 'two', 2, "three"]); 
+console.log(output);
