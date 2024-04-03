@@ -261,3 +261,23 @@ function search(arr, target) {
 
 var arr = [1, 3, 16, 22, 31, 33, 34];
 console.log(search(arr, 31));
+
+//1.17
+function isIsogram(str) {
+    var charCount = {};
+
+    str = str.toLowerCase();
+
+    for (var i = 0; i < str.length; i++) {
+        var char = str[i];
+        if (charCount[char]) {
+            return false;
+        }
+        charCount[char] = true;
+    }
+
+    return true;
+}
+
+var output = isIsogram("isogram");
+console.log(output);
