@@ -166,3 +166,36 @@ function flipEveryNChars(input, n) {
 var input = 'a short example';
 var output = flipEveryNChars(input, 5);
 console.log(output);
+
+//1.13
+function detectedOutlierValue(str) {
+    var numbers = str.split(' ').map(Number);
+
+    var evenCount = 0;
+    var oddCount = 0;
+    var evenIndex = -1;
+    var oddIndex = -1;
+
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenCount++;
+            evenIndex = i;
+        } else {
+            oddCount++;
+            oddIndex = i;
+        }
+    }
+
+    if (evenCount === 1) {
+        return numbers[evenIndex];
+    }
+
+    if (oddCount === 1) {
+        return numbers[oddIndex];
+    }
+
+    return '';
+}
+
+var output = detectedOutlierValue("2 4 7 8 10");
+console.log(output);
