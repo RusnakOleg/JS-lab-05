@@ -218,3 +218,23 @@ function findPairForSum(arr, targetSum) {
 }
 var pair = findPairForSum([3, 34, 4, 12, 5, 2], 9);
 console.log(pair);
+
+//1.15
+function isWordsFliped(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    var concatenated = str1 + str1;
+
+    if (concatenated.includes(str2)) {
+        return true;
+    }
+
+    return false;
+}
+
+var str1 = 'hello world';
+var str2 = 'orldhello w';
+var output = isWordsFliped(str1, str2);
+console.log(output);
