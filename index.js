@@ -127,3 +127,24 @@ function findSmallestNumberAmongMixedElements(arr) {
 
 var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
 console.log(output);
+
+//1.11
+function modulo(dividend, divisor) {
+    if (divisor === 0 || isNaN(dividend) || isNaN(divisor)) {
+        return NaN;
+    }
+
+    var absDividend = Math.abs(dividend);
+    var absDivisor = Math.abs(divisor);
+
+    if (absDividend < absDivisor) {
+        return dividend;
+    }
+
+    var result = absDividend - Math.floor(absDividend / absDivisor) * absDivisor;
+
+    return dividend >= 0 ? result : -result;
+}
+
+var output = modulo(25, 4);
+console.log(output);
