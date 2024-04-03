@@ -199,3 +199,22 @@ function detectedOutlierValue(str) {
 
 var output = detectedOutlierValue("2 4 7 8 10");
 console.log(output);
+
+//1.14
+function findPairForSum(arr, targetSum) {
+    var seenNumbers = {};
+
+    for (var i = 0; i < arr.length; i++) {
+        var complement = targetSum - arr[i];
+        
+        if (seenNumbers[complement] !== undefined) {
+            return [seenNumbers[complement], arr[i]];
+        }
+        
+        seenNumbers[arr[i]] = arr[i];
+    }
+
+    return [];
+}
+var pair = findPairForSum([3, 34, 4, 12, 5, 2], 9);
+console.log(pair);
