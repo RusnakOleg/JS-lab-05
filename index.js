@@ -69,3 +69,25 @@ var obj = {
 };
 var output = getProductOfAllElementsAtProperty(obj, 'key');
 console.log(output);
+
+//1.8
+function sumDigits(number) {
+    var numberStr = Math.abs(number).toString();
+
+    var sum = 0;
+    for (var i = 0; i < numberStr.length; i++) {
+        sum += parseInt(numberStr[i]);
+    }
+
+    if (number < 0) {
+        sum *= -1;
+    }
+
+    return sum;
+}
+
+var output = sumDigits(1148);
+console.log(output);
+
+var output2 = sumDigits(-316);
+console.log(output2);
